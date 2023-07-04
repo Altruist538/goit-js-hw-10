@@ -1,5 +1,5 @@
 import { arrBreed, fetchBreeds, fetchCatByBreed } from '/src/js/cat-api';
-import axios from 'axios';
+import Notiflix from 'notiflix';
 import SlimSelect from 'slim-select';
 import 'slim-select/dist/slimselect.css';
 const loader = document.querySelector('p.loader');
@@ -41,9 +41,6 @@ breedSelectEl.addEventListener('change', event => {
 });
 
 function renderCatCad({ url, name, description, temperament }) {
-  loader.style.visibility = 'hidden';
-  loaderSpiner.style.visibility = 'hidden';
-
   const markup = `
       <img src="${url}" class="catImg" loading="lazy" width="360px" alt="Image cat" />
           <div class="catInfo"><h2 class="post-title">${name}</h2>
@@ -51,5 +48,7 @@ function renderCatCad({ url, name, description, temperament }) {
           <p>Temperament: ${temperament}</p>
           </div>
         `;
+  loader.style.visibility = 'hidden';
+  loaderSpiner.style.visibility = 'hidden';
   return (catInfoEl.innerHTML = markup);
 }
