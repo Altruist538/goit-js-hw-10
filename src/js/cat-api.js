@@ -5,6 +5,7 @@ import Notiflix from 'notiflix';
 const errorEl = document.querySelector('.error');
 axios.defaults.headers.common['x-api-key'] = myApiKey;
 let arrBreed;
+
 async function fetchBreeds() {
   try {
     const response = await axios.get('https://api.thecatapi.com/v1/breeds');
