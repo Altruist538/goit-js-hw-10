@@ -22,7 +22,6 @@
   width: 450px;
   margin: 40px auto;
 }
-
 .loader {
   margin: auto;
   position: relative;
@@ -42,7 +41,6 @@
   box-shadow: 0 2px 0 #ff3d00 inset;
   animation: rotate 2s linear infinite;
 }
-
 @keyframes rotate {
   0% {
     transform: rotate(0);

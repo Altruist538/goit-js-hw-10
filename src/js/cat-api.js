@@ -25,6 +25,7 @@ function fetchCatByBreed(breedId) {
     .then(response => response.data)
     .catch(error => {
       errorEl.style.visibility = 'visible';
+
       throw error;
     });
 }
