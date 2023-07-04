@@ -5,6 +5,7 @@ const errorEl = document.querySelector('.error');
 axios.defaults.headers.common['x-api-key'] = myApiKey;
 let arrBreed;
 async function fetchBreeds() {
+  errorEl.style.visibility = 'hidden';
   try {
     const response = await axios.get('https://api.thecatapi.com/v1/breeds');
     arrBreed = response.data.map(breed => ({
@@ -18,6 +19,7 @@ async function fetchBreeds() {
 }
 
 function fetchCatByBreed(breedId) {
+  errorEl.style.visibility = 'hidden';
   return axios
     .get(`https://api.thecatapi.com/v1/images/search?breed_ids=${breedId}`)
     .then(response => response.data)

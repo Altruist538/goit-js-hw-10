@@ -1,9 +1,11 @@
 import { arrBreed, fetchBreeds, fetchCatByBreed } from '/src/js/cat-api';
+import axios from 'axios';
 import SlimSelect from 'slim-select';
 import 'slim-select/dist/slimselect.css';
 const loader = document.querySelector('p.loader');
 const loaderSpiner = document.querySelector('span.loader');
 const breedSelectEl = document.querySelector('.breed-select');
+
 const catInfoEl = document.querySelector('.cat-info');
 
 (async function () {
