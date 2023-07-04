@@ -5,9 +5,8 @@ import 'slim-select/dist/slimselect.css';
 const loader = document.querySelector('p.loader');
 const loaderSpiner = document.querySelector('span.loader');
 const breedSelectEl = document.querySelector('.breed-select');
-
 const catInfoEl = document.querySelector('.cat-info');
-
+breedSelectEl.setAttribute('style', 'width: 450px;  margin: 40px auto;');
 (async function () {
   await fetchBreeds();
   let select = new SlimSelect({
