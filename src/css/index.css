@@ -5,12 +5,10 @@
   margin: auto;
   background-color: rgb(216, 214, 214);
   overflow: hidden;
-  /* border: 2px solid gray; */
   border-radius: 30px;
 }
 .is-hidden {
   visibility: hidden;
-  /* display: none; */
 }
 .visible {
   visibility: visible;
