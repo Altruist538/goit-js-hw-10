@@ -29,7 +29,7 @@ breedSelectEl.addEventListener('change', event => {
   loader.style.visibility = 'visible';
   loaderSpiner.style.visibility = 'visible';
   catInfoEl.innerHTML = '';
-  breedId = event.target.value;
+  breedId = event.currentTarget.value;
   return fetchCatByBreed(breedId).then(data =>
     renderCatCad({
       url: data[0].url,
