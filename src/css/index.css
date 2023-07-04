@@ -1,4 +1,32 @@
+.container {
+  z-index: 100;
+  width: 800px;
+  display: flex;
+  margin: auto;
+  background-color: rgb(216, 214, 214);
+  overflow: hidden;
+  /* border: 2px solid gray; */
+  border-radius: 30px;
+}
+.is-hidden {
+  visibility: hidden;
+  /* display: none; */
+}
+.visible {
+  visibility: visible;
+}
+.catImg {
+  z-index: 1;
+  display: block;
+  margin-right: 20px;
+}
+.breed-select {
+  width: 450px;
+  margin: 40px auto;
+}
+
 .loader {
+  margin: auto;
   position: relative;
   width: 100px;
   height: 100px;
@@ -24,4 +52,14 @@
   100% {
     transform: rotate(360deg);
   }
+}
+.loader-text {
+  font-size: 20px;
+  text-align: center;
+  line-height: 1.5;
+}
+.error {
+  font-size: 40px;
+  text-align: center;
+  line-height: 1.5;
 }
